@@ -45,10 +45,17 @@ For Fedora,
 ~~~
 $ docker build -t gluster-fedora Fedora
 ~~~
+
 For CentOS,
 ~~~
 $ docker build -t gluster-centos CentOS
 ~~~
+
+For Raspbian,
+~~~
+$ docker buildx build --platform linux/arm/v7 -t gluster-server-raspbian gluster-server-raspbian
+~~~
+
 This command will build the docker image from the Dockerfile and will be assigned the name gluster-fedora or gluster-centos respectively. ‘-t’ option is used to give a name to the image we built.
 
 Once the image is built in either of the above two steps, now we can run the container with gluster daemon running. 
